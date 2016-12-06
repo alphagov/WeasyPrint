@@ -89,8 +89,7 @@ class HTML(object):
                         namespaceHTMLElements=False)
                 else:
                     result = html5lib.parse(
-                        source, treebuilder='lxml', override_encoding=encoding,
-                        transport_encoding=protocol_encoding,
+                        str(source), treebuilder='lxml',
                         namespaceHTMLElements=False)
                 assert result
         base_url = find_base_url(result, base_url)
